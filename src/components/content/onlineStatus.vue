@@ -5,17 +5,17 @@
 </template>
 
 <script>
+  var map;
   export default {
     data() {
       return {
-        map: '',
         district: '',
         polygons: [],
         cityCode: '',
       }
     },
     mounted() {
-      this.map = new AMap.Map('onlineStatus', {
+      map = new AMap.Map('onlineStatus', {
         zoom: 7, //级别
         resizeEnable: true,
       });
@@ -48,7 +48,7 @@
             });
             this.polygons.push(polygon);
           }
-          this.map.setFitView(); //地图自适应
+          map.setFitView(); //地图自适应
         }
 
         var subList = data.districtList;

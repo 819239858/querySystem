@@ -1,24 +1,29 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from 'vue'
-import App from './App'
-import router from './router'
+import Vue from 'vue';
+import App from './App';
+import router from './router';
 import iView from 'iview';
 import 'iview/dist/styles/iview.css';
 import VueParticles from 'vue-particles' ;
-import "./assets/iconfont/iconfont.css"; 
+import "./assets/iconfont/iconfont.css";
+import axios from 'axios';
+import echarts from 'echarts';
 
-import './components/index.less';
+import '../src/assets/index.less'
+import '../my-theme/index.less';
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+Vue.prototype.$http = axios;
+Vue.prototype.$echarts = echarts;
 
 Vue.use(iView);
 Vue.use(VueParticles);
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
+el: '#app',
+router,
+components: { App },
+template: '<App />'
 })

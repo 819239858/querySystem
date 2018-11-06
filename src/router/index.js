@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import MainPage from '@/components/mainPage'
-import Login from '@/components/login'
-import OnlineStatus from '@/components/content/onlineStatus'
-import QueryEvent from '@/components/content/queryEvent'
-import Index from '@/components/content/index'
+import MainPage from '@/page/mainPage'
+import Login from '@/page/login'
+import OnlineStatus from '@/components/allManagement/onlineStatus'
+import QueryEvent from '@/components/allManagement/queryEvent'
+import Index from '@/page/index'
 
 Vue.use(Router)
 
